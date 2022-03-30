@@ -1,0 +1,45 @@
+The <!DOCTYPE html> declaration defines that this document is an HTML5 document
+The <!DOCTYPE> declaration is not case sensitive.
+The <!DOCTYPE> declaration for HTML5 is:
+
+<tagname> Content goes here... </tagname>
+
+An HTML element is defined by a start tag, some content, and an end tag.
+The HTML element is everything from the start tag to the end tag:
+
+The <html> element is the root element and it defines the whole HTML document.
+
+Some HTML elements will display correctly, even if you forget the end tag:
+
+HTML is Not Case Sensitive
+
+Attributes usually come in name/value pairs like: name="value"
+
+HTML Formatting Elements
+Formatting elements were designed to display special types of text:
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Smaller text
+
+HTML links are hyperlinks.
+
+The target attribute specifies where to open the linked document.
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window
+
+Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
+<a href="mailto:someone@example.com">Send email</a>
+
+Emojis are characters from the UTF-8 character set: 😄 😍 💗
+
+The autocomplete attribute specifies whether a form should have autocomplete on or off.
+When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+
+The <datalist> element specifies a list of pre-defined options for an <input> element.
+Users will see a drop-down list of the pre-defined options as they input data.
+
