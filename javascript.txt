@@ -26,3 +26,11 @@ regular expression-   it is use for validation in form
   }
 
 </script>
+
+
+Static: static method in class : bina object banaye classname.function name call se static method call ho jati hai
+ex static add(a,b){
+  return a+b;
+}
+
+

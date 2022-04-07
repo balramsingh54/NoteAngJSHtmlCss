@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>class</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	class Employee{
+		constructor(name, experience, givendivision){
+			this.name = name;
+			this.experience= experience;
+			this.division =  givendivision;
+		}
+
+		slogan(){
+			return `I am ${this.name} and this is the best`;
+		}
+
+		joiningyear(){
+			return 2022 - this.experience;
+		}
+
+		static add(a, b){
+			return a+b;
+		}
+	}
+
+
+	class Programmer extends Employee{
+		constructor(name, experience, givendivision, language, github){
+			super(name, experience, givendivision)
+			this.language= language;
+			this.github =  github;
+		}
+
+		favouratelanguage(){
+			if (this.language=="python") {
+				return 'python';
+			}else{
+				return 'javascript';
+			}
+		}
+
+		static multiply(a,b){
+			return a*b;
+		}
+
+	}
+
+	suman= new Programmer("Balram Singh", 2, "backend", "Go", "balramsingh54");
+	console.log(suman);
+	console.log(suman.favouratelanguage());
+
+
+
+
+
+	// balram= new Employee("ratan", 34, "frontend")
+	// console.log(balram);
+	// console.log(balram.slogan());
+	// console.log(balram.joiningyear());
+
+	// console.log(Employee.add(11,12));
+
+</script>
+</body>
+</html>
