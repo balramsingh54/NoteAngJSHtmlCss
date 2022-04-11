@@ -7,13 +7,30 @@
 	<script src="jquery.js"></script>
 </head>
 <body>
-	<h1>this is jquery tutorial</h1>
-
+	<h1 style="border: 1px solid black;" id="heading">this is jquery tutorial</h1>
 	<script>
 		
 		$(document).ready(function(){
-			alert(1);
-		})
+			$("#heading").css("color","red");
+		});
+
+		$(document).ready(function(){
+			$('#heading').click(function(){
+				$('#heading').css('background-color','yellow');
+			});
+			$('#heading').dblclick(function(){
+				$('#heading').css('background-color','hotpink');
+			});
+			$('#heading').mouseover(function(){
+				$('#heading').css('background-color','purple');
+			});
+			$('#heading').mouseleave(function(){
+				$('#heading').css('background-color','gray');
+			});
+		});
+
+
 	</script>
 </body>
 </html>
+

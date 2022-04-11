@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jquery</title>
+	<script src="jquery.js"></script>
+	<style>
+
+		.first{
+
+			background-color: red;
+			border: 1px solid black;
+		}
+		.second{
+			border: 1px solid black;
+			background-color: purple;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div id="mydiv">
+		This is Balram
+		<h1>this is jquery tutorial</h1>
+	</div>
+	<button id="mybtn">add Class</button>
+	<button id="mybtn2">add Class</button>
+
+	<script>
+		$(document).ready(function(){
+			$('#mybtn').click(function(){
+				$('#mydiv').addClass('first');
+			});
+		});
+
+		$(document).ready(function(){
+			$('#mybtn2').click(function() {
+				$('#mydiv').toggleClass('second');
+			});
+		});
+
+	</script>
+</body>
+</html>
+
