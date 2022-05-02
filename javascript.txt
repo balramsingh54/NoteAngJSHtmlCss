@@ -34,3 +34,5 @@ ex static add(a,b){
 }
 
 
+indexof():= ye ek boolean result deta hai agar find kiya to 1 or nhi find kiya to 0 ye index wise search krta hai jaise = :  "hello this is balram and he is engi";
+ idexof("kiya") to ye ek value or index number dega jaha kiya present hai
