@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: Roboto, roboto-regular;
+}
+
+:root{
+    --blue: #06257a;
+    --white: #fff;
+    --gray: #EFF2F9;
+    --black: #010717;
+    --black2: #9D9FA4;
+}
+body{
+    overflow-x: auto;
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+.navigator{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--blue);
+    transition: 0.5s;
+}
+
+.navigator.active{
+    width: 80px;
+}
+.navigator ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigator ul li{
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    list-style: none;
+    padding-left: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.navigator ul li a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: var(--white);
+}
+.navigator ul li:hover{
+    background-color: white;
+}
+.navigator ul li a:hover{
+    color: var(--blue);
+}
+.navigator ul li:nth-child(1){
+    /* margin-bottom: 40px; */
+    background-color: crimson;
+    font-size: 25px !important;
+    border-radius: 0px;
+}
+
+#cname{
+    font-size: 30px;
+}
+#clogo{
+    padding-top: 8px;
+}
+.navigator ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center !important;
+    line-height: 60px;
+    padding-top: 15px;
+}
+
+.navigator ul li a .title{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.navigator ul li a .icon ion-icon{
+    font-size: 1.75em;
+}
+
+/* main */
+
+.main{
+    position: absolute;
+    width: calc(100% - 250px);
+    left: 250px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+    overflow: auto;
+}
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.top-bar{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: palegoldenrod;
+    padding: 0 30px 0 10px;
+}
+.toggle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 60px;
+    justify-content: center;
+    height: 60px;
+    font-size: 2.5em;
+}
+.toggle:hover{
+    background-color: rgb(234, 214, 214);
+    border-radius: 50%;
+}
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    height: 40px;
+    width: 100%;
+    padding: 5px 35px;
+    border-radius: 40px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+.search label ion-icon{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 1.2em;
+}
+#search-icon{
+    margin-top: -2px;
+}
+.users{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.users img{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 50%;
+}
+#login{
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.cardbox{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 30px;
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
+}
+
+.card{
+    width: 100%;
+    position: relative;
+    background-color: var(--white);
+    padding: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    border-radius: 30px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.numbers{
+    position: relative;
+    color: var(--blue);
+    font-size: 40px;
+    padding-bottom: 5px;
+}
+
+.card-name{
+    color: var(--black2);
+}
+
+.iconBox{
+    font-size: 45px;
+    color: var(--black2);
+}
+
+.card:hover{
+    background-color: lightgray;
+}
+
+.orders{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    padding-left: 20px;
+}
+.recent-orders{
+    position: relative;
+    max-height: 440px;
+    overflow: scroll;
+    display: grid;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.card-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-header h1{
+    color: var(--blue);
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.orders table thead td{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.orders .recent-orders table tr{
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.orders .recent-orders table tbody tr:hover{
+    background: var(--black2);
+}
+
+.orders .recent-orders table tr td{
+    padding: 10px;
+}
+
+.orders .recent-orders table tr td:last-child{
+    text-align: end;
+}
+
+.orders .recent-orders table tr td:nth-child(2){
+    text-align: center;
+}
+
+.orders .recent-orders table tr td:nth-child(3){
+    text-align: center;
+}
+
+.delevered{
+    padding: 5px 10px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    color: var(--white);
+}
+.return{
+    padding: 5px 10px;
+    background-color: rgb(247, 87, 23);
+    border-radius: 5px;
+    color: var(--white);
+}
+.pending{
+    padding: 5px 10px;
+    background-color: rgb(237, 182, 19);
+    border-radius: 5px;
+    color: var(--white);
+}
+.in-progress{
+    padding: 5px 10px;
+    background-color: rgb(98, 88, 235);
+    border-radius: 5px;
+    color: var(--white);
+}
