@@ -190,10 +190,10 @@ body{
     padding: 20px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    grid-gap: 30px;
-    /* display: grid;
-    grid-template-columns: repeat(4,1fr); */
+    /* justify-content: space-between;
+    grid-gap: 30px; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 
 .card{
@@ -320,4 +320,66 @@ body{
     background-color: rgb(98, 88, 235);
     border-radius: 5px;
     color: var(--white);
+}
+.recent-customer{
+    position: relative;
+    min-height: 350px;
+    background: var(--white);
+    border-radius: 20px;
+    display: grid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 20px;
+}
+
+.imgbox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: auto;
+}
+
+.recent-customer .imgbox img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+}
+.recent-customer table tr:hover{
+    background-color: var(--black2);
+}
+.recent-customer table tr td{
+    padding: 10px 0;
+}
+.recent-customer table tr td span{
+    font-size: 14px;
+    padding-top: 5px;
+    color: black;
+}
+
+@media (max-width:990px) {
+    .cardbox{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        margin: 10px;
+    }
+}
+
+@media (max-width:690px) {
+    .cardbox{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card{
+        margin: 10px;
+    }
+}
+
+@media (max-width:780px) {
+    .orders{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
