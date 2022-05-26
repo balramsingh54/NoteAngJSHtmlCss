@@ -7,8 +7,8 @@ let main = document.querySelector('.main');
 
 
 toggle.onclick = function(){
-    navigator.classList.add('active');
-    main.classList.add('active');
+    navigator.classList.toggle('active');
+    main.classList.toggle('active');
 }
 
 function activelink(){
